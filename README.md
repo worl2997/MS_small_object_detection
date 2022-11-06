@@ -128,8 +128,13 @@ OMP_NUM_THREADS=1 python tools/train_net.py \
     --num-gpus 8 \
     OUTPUT_DIR training_dir/fcos_R_50_1x
 ```
+```
+OMP_NUM_THREADS=1 python -m tools.train_net     --config-file configs/FCOS-Detection/R_50_1x.yaml     --num-gpus 1     OUTPUT_DIR training_dir/fcos_R_50_1x
+```
 To evaluate the model after training, run:
-
+```
+OMP_NUM_THREADS=8 python -m tools.train_net  --eval-only --config-file configs/COCO-Detection/retinanet_R_50_FPN_1x.yaml --num-gpus 1 MODEL.WEIGHTS training_dir/retinanet_50/model_final.pth 
+```
 ```
 OMP_NUM_THREADS=1 python tools/train_net.py \
     --config-file configs/FCOS-Detection/R_50_1x.yaml \
