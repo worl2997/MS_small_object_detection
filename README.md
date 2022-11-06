@@ -4,8 +4,6 @@
 
 # Multi sclae feature fusion method for small object detection
 
-To date, AdelaiDet implements the following algorithms:
-
 ## Models
 ### COCO Object Detecton Baselines with [FCOS](https://arxiv.org/abs/1904.01355)
 Name | inf. time | box AP | download
