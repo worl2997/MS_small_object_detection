@@ -1,0 +1,14 @@
+_BASE_: "Base-FCOS.yaml"
+MODEL:
+  WEIGHTS: "/home/jacky/바탕화면/졸업논문작업/AdelaiDet/training_dir/MS_R_50_DSPP_MCFFPN_SFF/pretrained.pth"   # "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+  RESNETS:
+    DEPTH: 50
+  FCOS:
+    BOX_QUALITY: "iou"
+SOLVER:
+  STEPS: (120000, 160000)
+  MAX_ITER: 180000
+  CHECKPOINT_PERIOD: 10000
+OUTPUT_DIR: "output/fcos/MS_R_50_2x_iou"
+
+# "/home/jacky/바탕화면/졸업논문작업/AdelaiDet/training_dir/MS_R_50_DSPP_SFF/pretrained_DSPP.pth"
